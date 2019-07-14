@@ -1,6 +1,5 @@
 from investingtoolkit.apikeys import ApiKeys
-from datatest import validate
-import pytest
+import os
 
 x = ApiKeys(api='TestApi')
 
@@ -22,6 +21,18 @@ def test_check_keys_directory_with_check():
     assert x.directory_exists is False
 
 
-def test_input_api_key_value():
+def test_pickled_api_key():
+    assert x.pickled_api_key is None
+
+
+def test_input_api_key_value(monkeypatch):
+    os.mkdir(x.directory_name)
+    key = "apikey123456"
+    monkeypatch.setattr('builtins.input', lambda prompt: key)
     x.input_api_key()
-    assert x.pickled_api_key is not None
+    assert input('Please enter your API Key for TestApi: ' == 'apikey123456')
+
+def test_remove_keys_directory():
+    os.remove('./keys/TestApi.p')
+    os.rmdir(x.directory_name)
+
