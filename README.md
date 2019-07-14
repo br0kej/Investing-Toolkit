@@ -11,6 +11,10 @@ orientated programming.
 - Equity Symbol Summary - Daily (% Gain/Loss, High, Low, Close)
 - Equity Symbol Cash Out/Stop Loss Generator
     - Defaults to 20% gain / 10% loss
+<<<<<<< Updated upstream
     
 
     
+=======
+    
+>>>>>>> Stashed changes

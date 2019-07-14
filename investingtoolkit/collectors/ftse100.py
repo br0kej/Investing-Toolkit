@@ -4,9 +4,11 @@ import json
 import datetime
 import os
 
+
 def check_data_directory():
     if not os.path.exists("../output/ftse100"):
         os.makedirs("../output/ftse100")
+
 
 ts = '{0:%Y-%m-%d}'.format(datetime.datetime.now())
 
