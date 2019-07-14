@@ -22,13 +22,6 @@ def test_check_keys_directory_with_check():
     assert x.directory_exists is False
 
 
-def test_check_keys_directory_once_made():
-    x.check_keys_directory()
-    x.make_keys_directory()
-    x.check_keys_directory()
-    assert x.directory_exists is True
-
-
 def test_input_api_key_value():
     x.input_api_key()
     assert x.pickled_api_key is not None
