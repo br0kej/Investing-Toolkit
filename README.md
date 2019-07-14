@@ -1,5 +1,7 @@
 # Investing Toolkit
 
+[![Build Status](https://travis-ci.com/br0kej/Investing-Toolkit.svg?branch=master)](https://travis-ci.com/br0kej/Investing-Toolkit)
+
 Investing Toolkit provides stock search, data collection, analysis and calculations to aid with investment decisions.
 
 Personal Project to support my investing and a chance to get my head around object
