@@ -36,13 +36,13 @@ class Symbols:
         """
         Uses the Alpha Vantage Response to return the stock/share daily high.
         """
-        self.high = self.response['Global Quote']['03. high']
+        self.high = float(self.response['Global Quote']['03. high'])
 
     def get_low(self):
         """
         Uses the Alpha Vantage Response to return the stock/share daily low.
         """
-        self.low = self.response['Global Quote']['04. low']
+        self.low = float(self.response['Global Quote']['04. low'])
 
     def summary(self):
         """
