@@ -7,7 +7,7 @@ class Symbols:
     def __init__(self, symbol, apiKey=''):
         self.symbol = symbol
         self.baseUrl = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol='
-        self.url: str = None
+        self.url = None
         self.response = None
         self.apiKey = apiKey
 

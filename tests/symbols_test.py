@@ -1,6 +1,5 @@
 from investingtoolkit.symbols import Symbols
 from datatest import validate
-import json
 
 x = Symbols('MSFT', apiKey='demo')
 
