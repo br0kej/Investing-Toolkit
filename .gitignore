@@ -129,3 +129,5 @@ db.sqlite
 *.p
 .DS_STORE
 /output/*
+.vscode
+scratchpad.py
