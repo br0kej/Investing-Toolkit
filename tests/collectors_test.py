@@ -31,7 +31,6 @@ def test_parse_html():
 def test_extract_target_html_object():
     pass
 
-#TODO: Create test for this function
 def test_output_to_json():
     results = [{'test1':'123'}]
     x.output_to_json('test', results)
