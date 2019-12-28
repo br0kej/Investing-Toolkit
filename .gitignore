@@ -131,3 +131,5 @@ db.sqlite
 /output/*
 .vscode
 scratchpad.py
+test_output
+.idea
