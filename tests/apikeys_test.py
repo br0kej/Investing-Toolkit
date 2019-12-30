@@ -1,15 +1,17 @@
 from investingtoolkit.apikeys import ApiKeys
 import os
 
-x = ApiKeys(api='TestApi')
+x = ApiKeys('test_keys', api='TestApi')
 
+if os.path.isdir('test_keys'):
+    os.rmdir('test_keys')
 
 def test_api_value():
     assert x.api_name == "TestApi"
 
 
 def test_directory_name_value():
-    assert x.directory_name == "keys/"
+    assert x.directory_name == "test_keys"
 
 
 def test_check_keys_directory_no_check():
@@ -33,6 +35,6 @@ def test_input_api_key_value(monkeypatch):
     assert input('Please enter your API Key for TestApi: ' == 'apikey123456')
 
 def test_remove_keys_directory():
-    os.remove('./keys/TestApi.p')
+    os.remove('./test_keys/TestApi.p')
     os.rmdir(x.directory_name)
 

@@ -3,9 +3,9 @@ import pickle
 
 
 class ApiKeys:
-    def __init__(self, api=''):
+    def __init__(self, key_directory_name, api=''):
         self.api_name = api
-        self.directory_name = "keys/"
+        self.directory_name = key_directory_name
         self.directory_exists = True
         self.pickled_api_key = None
         self.api_key_path = None
@@ -21,7 +21,7 @@ class ApiKeys:
 
     def input_api_key(self):
         api_key = input('Please enter API Key for ' + self.api_name + ': ')
-        self.pickled_api_key = pickle.dump(api_key, open(self.directory_name + self.api_name + ".p", "wb"))
+        self.pickled_api_key = pickle.dump(api_key, open(self.directory_name + '/' + self.api_name + ".p", "wb"))
 
     def get_api_key_path(self):
         self.api_key_path = self.directory_name + self.api_name + ".p"
